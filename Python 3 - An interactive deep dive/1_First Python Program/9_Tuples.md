@@ -120,7 +120,8 @@ print (z)
 </br>
 
 2. Example 2:
-</br>
+
+
 ```python
 (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)  #①
 
