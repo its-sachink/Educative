@@ -135,6 +135,12 @@ print (SUNDAY)
 #6
 ```
 
+</br>
+</br>
+② Now each variable has its value: MONDAY is 0, TUESDAY is 1, and so forth.
 
+</br>
+</br>
+You can also use multi-variable assignment to build functions that return multiple values, simply by returning a tuple of all the values. <mark>The caller can treat it as a single tuple, or it can assign the values to individual variables. </mark> Many standard Python libraries do this, including the os module.
 
 
