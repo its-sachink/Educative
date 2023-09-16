@@ -45,4 +45,4 @@ The output will look something like this:
 - If you display a folder of documents as a multi-column list, it will display a table with the document icon, the document name, the size, type, last-modified date, and so on.
 -  If the folder contains a 1093-byte file named TODO, your file manager won’t display TODO 1093 bytes; it’ll say something like TODO 1 KB instead.
 
-![Alt text](image.png)
+![test screenshot](../images/Screenshot_1.jpg)
