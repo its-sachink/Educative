@@ -57,7 +57,10 @@ if __name__ == '__main__':
 
 </br>
 </br>
+
 - The output of the program is :
+</br>
+
 ```
 you@localhost:~/diveintopython3/examples$ python3 alphametics.py "HAWAII + IDAHO + IOWA + OHIO == STATES"
 HAWAII + IDAHO + IOWA + OHIO = STATES
