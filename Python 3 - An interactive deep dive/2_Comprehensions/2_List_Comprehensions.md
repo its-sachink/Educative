@@ -14,7 +14,7 @@ print (a_list)
 ```
 </br>
 </br>
-- You can use python expression in a list comprehension
+- You can use <mark>python expression in a list comprehension</mark>
 
 ```python
 import os, glob
@@ -29,7 +29,7 @@ print ([os.path.realpath(f) for f in glob.glob('*.xml')])  #②
 </br>
 
 - List comprehensions can also filter items.
-- This list comprehension looks at the list of all .py files in the current directory, and the if expression filters that list by testing whether the size of each file is smaller than 6000 bytes.
+- This list comprehension looks at the list of all .py files in the current directory, and the <mark>if expression filters that list by testing whether the size of each file is smaller than 6000 bytes.</mark>
 ```python
 import os, glob
 print ([f for f in glob.glob('*.py') if os.stat(f).st_size < 6000])  #①
@@ -53,4 +53,4 @@ print ([(humansize.approximate_size(os.stat(f).st_size), f) for f in glob.glob('
 ```
 
 - ① This list comprehension finds all the .xml files in the current working directory, gets the size of each file (by calling the os.stat() function), and constructs a tuple of the file size and the absolute path of each file (by calling the os.path.realpath() function).
-- ② This comprehension builds on the previous one to call the approximate_size() function with the file size of each .xml file.
+- ② <mark>This comprehension builds on the previous one to call the approximate_size() function with the file size of each .xml file.</mark>
