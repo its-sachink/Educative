@@ -50,7 +50,7 @@ pathname = '/Users/pilgrim/diveintopython3/examples/humansize.py'
 print (os.path.split(pathname) )                                       #①
 #('/Users/pilgrim/diveintopython3/examples', 'humansize.py')
 
-```(dirname, filename) = os.path.split(pathname)```                          #②
+``(dirname, filename) = os.path.split(pathname)``                          #②
 print (dirname )                                                       #③
 #/Users/pilgrim/diveintopython3/examples
 
