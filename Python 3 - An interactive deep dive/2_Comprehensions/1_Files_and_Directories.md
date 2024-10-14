@@ -50,7 +50,7 @@ pathname = '/Users/pilgrim/diveintopython3/examples/humansize.py'
 print (os.path.split(pathname) )                                       #①
 #('/Users/pilgrim/diveintopython3/examples', 'humansize.py')
 
-<mark>(dirname, filename) = os.path.split(pathname)</mark>                          #②
+(dirname, filename) = os.path.split(pathname)                          #②
 print (dirname )                                                       #③
 #/Users/pilgrim/diveintopython3/examples
 
@@ -64,14 +64,15 @@ print (shortname)
 print (extension)
 #.py
 ```
--   ⑤ os.path also contains the os.path.splitext() function, which splits a filename and returns a tuple containing the filename and the file extension. You use the same technique to assign each of them to separate variables.
+- <mark>(dirname, filename) = os.path.split(pathname)</mark>
+-   ⑤ os.path also contains the <mark>os.path.splitext() function, which splits a filename and returns a tuple containing the filename and the file extension.</mark> You use the same technique to assign each of them to separate variables.
 
 </br>
 </br>
 
 ## Listing directories :
 </br>
--   The glob module is another tool in the Python standard library. It’s an easy way to get the contents of a directory programmatically, and it uses the sort of wildcards that you may already be familiar with from working on the command line.
+-   The <mark>glob module is another tool in the Python standard library. It’s an easy way to get the contents of a directory programmatically</mark>, and it uses the sort of wildcards that you may already be familiar with from working on the command line.
 </br>
 
 ```python
@@ -105,7 +106,7 @@ glob.glob('*test*.py')                       #③
 # 'romantest9.py']
 ```
 
--   ③ You can include multiple wildcards in your glob pattern. This example finds all the files in the current working directory that end in a .py extension and contain the word test anywhere in their filename.
+-   ③ You can include multiple wildcards in your glob pattern. <mark>This example finds all the files in the current working directory that end in a .py extension and contain the word test anywhere in their filename.</mark>
 
 </br>
 
@@ -130,7 +131,7 @@ print (time.localtime(metadata.st_mtime))  #⑤
 ```
 
 -   ③ st_mtime is the modification time, but it’s in a format that isn’t terribly useful. (Technically, it’s the number of seconds since the Epoch, which is defined as the first second of January 1st, 1970. Seriously.)
--   ⑤ The time.localtime() function converts a time value from seconds-since-the-Epoch (from the st_mtime property returned from the os.stat() function) into a more useful structure of year, month, day, hour, minute, second, and so on. This file was last modified on July 13, 2009, at around 5:25 PM.
+-   ⑤ <mark>The time.localtime() function converts a time value from seconds-since-the-Epoch (from the st_mtime property returned from the os.stat() function) into a more useful structure of year, month, day, hour, minute, second, and so on. This file was last modified on July 13, 2009, at around 5:25 PM.</mark>
 
 ```python
 # continued from the previous example
@@ -149,7 +150,7 @@ humansize.approximate_size(metadata.st_size)  #②
 ## Constructing absolute pathnames :
 </br>
 -   the glob.glob() function returned a list of relative pathnames.
--   But if you want to construct an absolute pathname — i.e. one that includes all the directory names back to the root directory or drive letter — then you’ll need the os.path.realpath() function.
+-   But if you want to construct an absolute pathname — i.e. one that includes all the directory names back to the root directory or drive letter — <mark>then you’ll need the os.path.realpath() function.</mark>
 
 ```python
 import os
