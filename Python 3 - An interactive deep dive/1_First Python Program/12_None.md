@@ -1,6 +1,6 @@
 # None :
 
--   None is a special constant in Python. It is a null value. None is not the same as False. None is not 0. None is not an empty string. Comparing None to anything other than None will always return False.
+-   ***<mark>None is a special constant in Python. It is a null value. None is not the same as False.</mark>*** None is not 0. None is not an empty string. Comparing None to anything other than None will always return False.
 - None is the only null value. It has its own datatype (NoneType).
 
 ```python
