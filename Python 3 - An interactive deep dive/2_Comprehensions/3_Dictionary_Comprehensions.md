@@ -22,8 +22,8 @@ print (metadata_dict['romantest3.py'].st_size)                           #⑥
 ```
 
 -   ① This is not a dictionary comprehension; it’s a list comprehension. It finds all .py files with test in their name, then constructs a tuple of the filename and the file metadata (from calling the os.stat() function).
--   ③ This is a dictionary comprehension.
--   ⑤ The keys of this particular dictionary are simply the filenames returned from the call to glob.glob('*test*.py').
+-   ③ <mark>This is a dictionary comprehension.</mark>
+-   ⑤ <mark>The keys of this particular dictionary are simply the filenames returned from the call to glob.glob('*test*.py').</mark>
 -   ⑥ The value associated with each key is the return value from the os.stat() function. That means we can “look up” a file by name in this dictionary to get its file metadata. One of the pieces of metadata is st_size, the file size. The file romantest2.py is 4640 bytes long.
 </br>
 </br>
@@ -44,7 +44,7 @@ print (humansize_dict['data.tar'])                                              
 #7.2 KiB
 ```
 
--   ② This dictionary comprehension builds on the previous comprehension, filters out files smaller than 6000 bytes (if meta.st_size > 6000), and uses that filtered list to construct a dictionary whose keys are the filename minus the extension (os.path.splitext(f)[0]) and whose values are the approximate size of each file (humansize.approximate_size(meta.st_size)).
+-   ② This dictionary comprehension builds on the previous comprehension, <mark>filters out files smaller than 6000 bytes (if meta.st_size > 6000), and uses that filtered list to construct a dictionary whose keys are the filename minus the extension (os.path.splitext(f)[0]) and whose values are the approximate size of each file (humansize.approximate_size(meta.st_size)).</mark>
 </br>
 </br>
 -   Swapping the keys and values of a dictionary.
