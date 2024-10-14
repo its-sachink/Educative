@@ -42,7 +42,7 @@ a_dict['database'] = 'blog'  #①
 print (a_dict)
 #{'server': 'db.diveintopython3.org', 'database': 'blog'}
 
-a_dict['user'] = 'mark'      #②
+<mark> a_dict['user'] = 'mark'      #② </mark>
 print (a_dict )              #③
 #{'server': 'db.diveintopython3.org', 'database': 'blog', 'user': 'mark'}
 
