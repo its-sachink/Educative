@@ -79,14 +79,19 @@ print ('1MB = 1000{0.modules[humansize].SUFFIXES[1000][0]}'.format(sys))
 ```
 </br>
 - The sys module holds information about the currently running Python instance. Since you just imported it, you can pass the sys module itself as an argument to the format() method. So the replacement field {0} refers to the sys module.
-- sys.modules is a dictionary of all the modules that have been imported in this Python instance. The keys are the module names as strings; the values are the module objects themselves. So the replacement field {0.modules} refers to the dictionary of imported modules.
+- <mark>sys.modules is a dictionary of all the modules that have been imported in this Python instance.</mark> The keys are the module names as strings; the values are the module objects themselves. <mark>So the replacement field {0.modules} refers to the dictionary of imported modules.</mark>
+</br>
+
     - sys.modules['humansize'].SUFFIXES is the dictionary defined at the top of the humansize module. The replacement field {0.modules[humansize].SUFFIXES} refers to that dictionary.
+</br>
     - sys.modules['humansize'].SUFFIXES[1000] is a list of SI suffixes: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']. So the replacement field {0.modules[humansize].SUFFIXES[1000]} refers to that list.
-    - sys.modules['humansize'].SUFFIXES[1000][0] is the first item of the list of SI suffixes: 'KB'. Therefore, the complete replacement field {0.modules[humansize].SUFFIXES[1000][0]} is replaced by the two-character string KB.
+</br>
+    - <mark>sys.modules['humansize'].SUFFIXES[1000][0] is the first item of the list of SI suffixes: 'KB'. Therefore, the complete replacement field {0.modules[humansize].SUFFIXES[1000][0]} is replaced by the two-character string KB.</mark>
+    </br>
 
 
 
-- The format specifier “.1” means “round to the nearest tenth” (i.e. display only one digit after the decimal point). The format specifier “f” means “fixed-point number” (as opposed to exponential notation or some other decimal representation).
+- <mark>The format specifier “.1” means “round to the nearest tenth” (i.e. display only one digit after the decimal point). The format specifier “f” means “fixed-point number” (as opposed to exponential notation or some other decimal representation).</mark>
 
 ```python
 print ('{0:.1f} {1}'.format(698.24, 'GB'))
