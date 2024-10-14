@@ -17,12 +17,14 @@ print (re.search(pattern, ''))      #⑥
 #<_sre.SRE_Match object at 0106F4A8>
 ```
 </br>
+
 ```console
 <_sre.SRE_Match object; span=(0, 1), match='M'>
 <_sre.SRE_Match object; span=(0, 2), match='MM'>
 <_sre.SRE_Match object; span=(0, 3), match='MMM'>
 <_sre.SRE_Match object; span=(0, 0), match=''>
 ```
+
 </br>
 - ① This pattern has three parts. ^ matches what follows only at the beginning of the string. You want to make sure that the M characters, if they’re there, are at the beginning of the string.
     - M? optionally matches a single M character. Since this is repeated three times, you’re matching anywhere from zero to three M characters in a row.
