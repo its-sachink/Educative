@@ -27,7 +27,8 @@ print(re.sub('ROAD$', 'RD.', s))              #⑤
 100 NORTH BROAD RD.
 ```
 </br>
-- The ＄ means “end of the string.” (There is a corresponding character, the caret ^, which means “beginning of the string.”) Using the re.sub() function, you search the string s for the regular expression 'ROAD＄' and replace it with 'RD.'. This matches the ROAD at the end of the string s, but does not match the ROAD that’s part of the word BROAD, because that’s in the middle of s.
+- <mark>The ＄ means “end of the string.” (There is a corresponding character, the caret ^, which means “beginning of the string.”) Using the re.sub() function, you search the string s for the regular expression 'ROAD＄' and replace it with 'RD.'.</mark> This matches the ROAD at the end of the string s, but does not match the ROAD that’s part of the word BROAD, because that’s in the middle of s.
+</br>
 - but if the street name was 'BROAD', then the regular expression would match 'ROAD' at the end of the string as part of the word 'BROAD', which is not what I wanted.
 
 </br>
@@ -64,8 +65,12 @@ print (re.sub(r'\bROAD\b', 'RD.', s))  #④
 100 BROAD RD. APT. 3
 ```
 </br>
-- 1) What I really wanted was to match 'ROAD' when it was at the end of the string and it was its own word (and not a part of some larger word). To express this in a regular expression, you use \b, which means “a word boundary must occur right here.” In Python, this is complicated by the fact that the '\' character in a string must itself be escaped.
-- 2) To work around the backslash plague, you can use what is called a raw string, by prefixing the string with the letter r. This tells Python that nothing in this string should be escaped; '\t' is a tab character, but r'\t' is really the backslash character \ followed by the letter t.
+- 1) What I really wanted was to match 'ROAD' when it was at the end of the string and it was its own word (and not a part of some larger word). To express this in a regular expression, <mark>you use \b, which means “a word boundary must occur right here.” In Python, this is complicated by the fact that the '\' character in a string must itself be escaped.</mark>
+</br>
+- 2) To work around the backslash plague, <mark>you can use what is called a raw string, by prefixing the string with the letter r. This tells Python that nothing in this string should be escaped; '\t' is a tab character, but r'\t' is really the backslash character \ followed by the letter t.</mark>
+</br>
     ** I recommend always using raw strings when dealing with regular expressions; otherwise, things get too confusing too quickly (and regular expressions are confusing enough already). **
+</br>
 - ③ Because 'ROAD' isn’t at the very end of the string, it doesn’t match, so the entire call to re.sub() ends up replacing nothing at all, and you get the original string back, which is not what you want.
-- ④ ** To solve this problem, I removed the $ character and added another \b. **
+</br>
+- ④ **<mark>To solve this problem, I removed the $ character and added another \b.</mark>**
