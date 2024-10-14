@@ -34,8 +34,8 @@ print (phonePattern.search('800-555-1212-1234').groups())        #④
 ```
 </br>
 
-- ① What’s \d{3}? Well, \d means “any numeric digit” (0 through 9). The {3} means “match exactly three numeric digits”; it’s a variation on the {n,m} syntax you saw earlier.
-    - all in parentheses means “match exactly three numeric digits, and then remember them as a **group** that I can ask for later”. Then match a literal hyphen.
+- ① What’s \d{3}? Well, <mark>\d means “any numeric digit” (0 through 9). The {3} means “match exactly three numeric digits”; it’s a variation on the {n,m} syntax you saw earlier.</mark>
+    - all in <mark>parentheses means “match exactly three numeric digits, and then remember them as a **group** that I can ask for later”. Then match a literal hyphen.</mark>
     - Then match another group of exactly three digits. Then another literal hyphen. Then another group of exactly four digits. Then match the end of the string.
 
 - ② To get access to the groups that the regular expression parser remembered along the way, use the groups() method on the object that the search() method returns.
@@ -64,7 +64,7 @@ print (phonePattern.search('800-555-1212') )                   #④
 </br>
 
 - ① What’s new is that you then match another hyphen, and a remembered group of one or more digits, then the end of the string.
-- ② The groups() method now returns a tuple of four elements.
+- ② <mark>The groups() method now returns a tuple of four elements.</mark>
 
 
 
@@ -89,7 +89,7 @@ print (phonePattern.search('800-555-1212') )                         #⑤
 ```
 </br>
 
-- ① \D+ : Well, \D matches any character except a numeric digit, and + means “1 or more”. So \D+ matches one or more characters that are not digits.
+- ① <mark>\D+ : Well, \D matches any character except a numeric digit, and + means “1 or more”. So \D+ matches one or more characters that are not digits.</mark>
 
 
 </br>
@@ -113,7 +113,7 @@ print (phonePattern.search('(800)5551212 x1234'))                     #⑤
 ```
 </br>
 
-- ① Instead of \D+ between the parts of the phone number, you now match on \D*. Remember that + means “1 or more”? Well, *means “zero or more”.
+- ① Instead of \D+ between the parts of the phone number, <mark>you now match on \D*. Remember that + means “1 or more”? Well, *means “zero or more”.</mark>
     - So now you should be able to parse phone numbers even when there is no separator character at all.
 - ⑤ There’s an extra character before the area code, but the regular expression assumes that the area code is the first thing at the beginning of the string.
 
@@ -157,7 +157,7 @@ print (phonePattern.search('80055512121234').groups())                     #④
 ```
 </br>
 
-- ① Note the lack of ^ in this regular expression. You are not matching the beginning of the string anymore. There’s nothing that says you need to match the entire input with your regular expression.
+- ① <mark>Note the lack of ^ in this regular expression. You are not matching the beginning of the string anymore.</mark> There’s nothing that says you need to match the entire input with your regular expression.
     - The regular expression engine will do the hard work of figuring out where the input string starts to match, and go from there.
     - When a regular expression does match, you can pick out specific pieces of it. You can find out what matched where.
 - ② Now you can successfully parse a phone number that includes leading characters and a leading digit, plus any number of any kind of separators around each part of the phone number.
