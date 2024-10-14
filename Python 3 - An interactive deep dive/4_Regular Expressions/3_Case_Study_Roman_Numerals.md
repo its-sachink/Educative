@@ -56,7 +56,9 @@ re.search(pattern, 'MCMC')                    #⑤
 print (re.search(pattern, ''))                #⑥
 #<_sre.SRE_Match object at 01071D98>
 ```
+
 </br>
+
 ```console 
 <_sre.SRE_Match object; span=(0, 3), match='MCM'>
 <_sre.SRE_Match object; span=(0, 2), match='MD'>
