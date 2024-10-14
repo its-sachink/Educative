@@ -75,8 +75,12 @@ print (re.search(pattern, ''))                #⑥
 - ① In parentheses, which defines a set of three mutually exclusive patterns, separated by vertical bars: CM, CD, and D?C?C?C? (which is an optional D followed by zero to three optional C characters). The regular expression parser checks for each of these patterns in order (from left to right), takes the first one that matches, and ignores the rest.
 </br>
 - ② 'MCM' matches because the first M matches, the second and third M characters are ignored, and the CM matches (so the CD and D?C?C?C? patterns are never even considered).
+</br>
 - ③ 'MD' matches because the first M matches, the second and third M characters are ignored, and the D?C?C?C? pattern matches D.
+</br>
 - ④ 'MMMCCC' matches because all three M characters match, and the D?C?C?C? pattern matches CCC (the D is optional and is ignored).
+</br>
 - ⑤ 'MCMC' does not match. The first M matches, the second and third M characters are ignored, and the CM matches, but then the ＄ does not match because you’re not at the end of the string yet (you still have an unmatched C character).
+</br>
 - ⑥ Interestingly, an empty string still matches this pattern, because all the M characters are optional and ignored, and the empty string matches the D?C?C?C? pattern where all the characters are optional and ignored.
-
+</br>
