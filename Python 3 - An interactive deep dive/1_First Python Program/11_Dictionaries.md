@@ -30,7 +30,7 @@ print (a_dict['db.diveintopython3.org'])                                    #④
 
 </br>
 </br>
-### Modifying a dictionary :
+### <mark> Modifying a dictionary : </mark>
 </br>
 
 ```python
@@ -42,7 +42,7 @@ a_dict['database'] = 'blog'  #①
 print (a_dict)
 #{'server': 'db.diveintopython3.org', 'database': 'blog'}
 
-<mark> a_dict['user'] = 'mark'      #② </mark>
+a_dict['user'] = 'mark'      #②
 print (a_dict )              #③
 #{'server': 'db.diveintopython3.org', 'database': 'blog', 'user': 'mark'}
 
@@ -56,7 +56,7 @@ print (a_dict)
 ```
 
 -   ⑤ Will this change the value of the user key back to “mark”? No! Look at the key closely — that’s a capital U in "User".
--   ***Dictionary keys are case-sensitive***, so this statement is creating a new key-value pair, not overwriting an existing one. It may look similar to you, but as far as Python is concerned, it’s completely different.
+-   ***<mark>Dictionary keys are case-sensitive</mark>***, <mark>so this statement is creating a new key-value pair, not overwriting an existing one.</mark> It may look similar to you, but as far as Python is concerned, it’s completely different.
 </br>
 </br>
 
@@ -64,7 +64,7 @@ print (a_dict)
 </br>
 </br>
 
--   Dictionaries aren’t just for strings. Dictionary values can be any datatype, including integers, booleans, arbitrary objects, or even other dictionaries.
+-   Dictionaries aren’t just for strings. <mark>Dictionary values can be any datatype, including integers, booleans, arbitrary objects, or even other dictionaries.</mark>
 
 ```python
 SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
