@@ -1,9 +1,9 @@
 # Postscript: Character Encoding Of Python Source Code
 
-- Python 3 assumes that your source code — i.e. each .py file — is encoded in UTF-8.
-    - In Python 2, the default encoding for .py files was ASCII. In Python 3, the default encoding is **UTFf-8.**
+- <mark>Python 3 assumes that your source code — i.e. each .py file — is encoded in UTF-8.</mark>
+    - In Python 2, the default encoding for .py files was ASCII. <mark>In Python 3, the default encoding is **UTFf-8.**</mark>
 
-- If you would like to use a different encoding within your Python code, you can put an encoding declaration on the first line of each file. This declaration defines a .py file to be windows-1252:
+- <mark>If you would like to use a different encoding within your Python code, you can put an encoding declaration on the first line of each file. This declaration defines a .py file to be windows-1252:</mark>
 
 ```console
 # -*- coding: windows-1252 -*-
