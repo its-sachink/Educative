@@ -26,21 +26,21 @@ print (re.search(pattern, ''))      #⑥
 ```
 
 </br>
-- ① This pattern has three parts. ^ matches what follows only at the beginning of the string. You want to make sure that the M characters, if they’re there, are at the beginning of the string.
-    - M? optionally matches a single M character. Since this is repeated three times, you’re matching anywhere from zero to three M characters in a row.
-    - nd ＄ matches the end of the string. When combined with the ^ character at the beginning, this means that the pattern must match the entire string, with no other characters before or after the M characters.
+- ① This pattern has three parts. <mark>^ matches what follows only at the beginning of the string.</mark> You want to make sure that the M characters, if they’re there, are at the beginning of the string.
+    - <mark>M? optionally matches a single M character.</mark> Since this is repeated three times, you’re matching anywhere from zero to three M characters in a row.
+    - and <mark>＄ matches the end of the string. When combined with the ^ character at the beginning, this means that the pattern must match the entire string, with no other characters before or after the M characters.</mark>
 
 </br>
 - ② The essence of the re module is the search() function, that takes a regular expression (pattern) and a string ('M') to try to match against the regular expression. If a match is found, search() returns an object which has various methods to describe the match.
-    - if no match is found, search() returns None, the Python null value.
+    - <mark>if no match is found, search() returns None, the Python null value.</mark>
 </br>
 - ③ 'MM’ matches because the first and second optional M characters match and the third M is ignored.
 </br>
 - ④ 'MMM' matches because all three M characters match.
 </br>
-- ⑤ 'MMMM' does not match. All three M characters match, but then the regular expression insists on the string ending (because of the ＄ character).
+- ⑤ <mark>'MMMM' does not match.</mark> All three M characters match, but then the regular expression insists on the string ending (because of the ＄ character).
 </br>
-- ⑥ Interestingly, an empty string also matches this regular expression, since all the M characters are optional.
+- ⑥ <mark>Interestingly, an empty string also matches this regular expression, since all the M characters are optional.</mark>
 
 </br>
 </br>
@@ -80,7 +80,7 @@ print (re.search(pattern, ''))                #⑥
 </br>
 - ④ 'MMMCCC' matches because all three M characters match, and the D?C?C?C? pattern matches CCC (the D is optional and is ignored).
 </br>
-- ⑤ 'MCMC' does not match. The first M matches, the second and third M characters are ignored, and the CM matches, but then the ＄ does not match because you’re not at the end of the string yet (you still have an unmatched C character).
+- ⑤ <mark>'MCMC' does not match.</mark> The first M matches, the second and third M characters are ignored, and the CM matches, but then the ＄ does not match because you’re not at the end of the string yet (you still have an unmatched C character).
 </br>
-- ⑥ Interestingly, an empty string still matches this pattern, because all the M characters are optional and ignored, and the empty string matches the D?C?C?C? pattern where all the characters are optional and ignored.
+- ⑥ <mark>Interestingly, an empty string still matches this pattern</mark>, because all the M characters are optional and ignored, and the empty string matches the D?C?C?C? pattern where all the characters are optional and ignored.
 </br>
