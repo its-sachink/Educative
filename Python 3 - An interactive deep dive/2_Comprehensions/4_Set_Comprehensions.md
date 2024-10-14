@@ -1,7 +1,7 @@
 # Set Comprehensions :
 </br>
 </br>
--   Syntax is remarkably similar to the syntax for dictionary comprehensions. The only difference is that sets just have values instead of key:value pairs.
+-   Syntax is remarkably similar to the syntax for dictionary comprehensions. <mark>The only difference is that sets just have values instead of key:value pairs.</mark>
 
 ```python
 a_set = set(range(10))
@@ -19,5 +19,5 @@ print ({2**x for x in range(10)})         #③
 ```
 </br>
 
--   ① Set comprehensions can take a set as input. This set comprehension calculates the squares of the set of numbers from 0 to 9.
+-   ① <mark>Set comprehensions can take a set as input. This set comprehension calculates the squares of the set of numbers from 0 to 9.</mark>
 -   ③ Set comprehensions do not need to take a set as input; they can take any sequence.
