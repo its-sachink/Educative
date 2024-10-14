@@ -189,7 +189,7 @@ print (a_set.pop() )                               #③
 
 ```
 </br>
-- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, *** <mark> so there is no way to control which value gets removed. It is completely arbitrary. </mark> ***
+- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, ***<mark> so there is no way to control which value gets removed. It is completely arbitrary. </mark>***
 </br>
 - ② The clear() method removes all values from a set, leaving you with an empty set. This is equivalent to a_set = set(), which would create a new empty set and overwrite the previous value of the a_set variable.
 
