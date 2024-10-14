@@ -42,4 +42,5 @@ None
 </br>
 </br>
 </br>
--  ① The most important thing to remember when using verbose regular expressions is that you need to pass an extra argument when working with them: ** re.VERBOSE ** is a constant defined in the re module that signals that the pattern should be treated as a verbose regular expression.
+
+-  ① The most important thing to remember when using verbose regular expressions is that you need to pass an extra argument when working with them: <mark>***re.VERBOSE*** is a constant defined in the re module that signals that the pattern should be treated as a verbose regular expression.</mark>
