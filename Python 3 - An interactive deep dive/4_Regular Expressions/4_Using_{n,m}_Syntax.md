@@ -35,15 +35,17 @@ print (re.search(pattern, 'MMMM'))  #⑤
 #None
 ```
 </br>
+
 ```console
 <_sre.SRE_Match object; span=(0, 1), match='M'>
 <_sre.SRE_Match object; span=(0, 2), match='MM'>
 <_sre.SRE_Match object; span=(0, 3), match='MMM'>
 None
 ```
+
 </br>
 
-- ① This pattern says: “Match the start of the string, then anywhere from zero to three M characters, then the end of the string.” The 0 and 3 can be any numbers; if you want to match at least one but no more than three M characters, you could say M{1,3}.
+- ① This pattern says: “Match the start of the string, then anywhere from zero to three M characters, then the end of the string.” The 0 and 3 can be any numbers; <mark>if you want to match at least one but no more than three M characters, you could say M{1,3}.</mark>
 
 </br>
 </br>
