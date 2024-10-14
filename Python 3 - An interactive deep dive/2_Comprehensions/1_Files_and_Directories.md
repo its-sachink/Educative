@@ -14,7 +14,7 @@ os.getcwd()                                           #④
 #C:\Users\pilgrim\diveintopython3\examples
 ```
 </br>
--   ④ When I called the os.chdir() function, I used a Linux-style pathname (forward slashes, no drive letter) even though I’m on Windows. This is one of the places where Python tries to paper over the differences between operating systems.
+-   ④ When I called the os.chdir() function, <mark>I used a Linux-style pathname (forward slashes, no drive letter) even though I’m on Windows. This is one of the places where Python tries to paper over the differences between operating systems.</mark>
 </br>
 </br>
 
@@ -36,8 +36,8 @@ print(os.path.join(os.path.expanduser('~'), 'diveintopython3', 'examples', 'huma
 #/nonexistent/diveintopython3/examples/humansize.py
 ```
 
--   ② In this slightly less trivial case, calling the os.path.join() function will add an extra slash to the pathname before joining it to the filename. It’s a backslash instead of a forward slash, because I constructed this example on Windows. If you replicate this example on Linux or Mac OS X, you’ll see a forward slash instead. Don’t fuss with slashes; always use os.path.join() and let Python do the right thing.
--   ④ Combining these techniques, you can easily construct pathnames for directories and files in the user’s home directory. The os.path.join() function can take any number of arguments. I was overjoyed when I discovered this, since addSlashIfNecessary() is one of the stupid little functions I always need to write when building up my toolbox in a new language. Do not write this stupid little function in Python; smart people have already taken care of it for you.
+-   ② In this slightly less trivial case, calling the os.path.join() function will add an extra slash to the pathname before joining it to the filename. It’s a backslash instead of a forward slash, because I constructed this example on Windows. If you replicate this example on Linux or Mac OS X, you’ll see a forward slash instead. <mark>Don’t fuss with slashes; always use os.path.join() and let Python do the right thing.</mark>
+-   ④ Combining these techniques, you can easily construct pathnames for directories and files in the user’s home directory. <mark>The os.path.join() function can take any number of arguments.</mark> I was overjoyed when I discovered this, since addSlashIfNecessary() is one of the stupid little functions I always need to write when building up my toolbox in a new language. Do not write this stupid little function in Python; smart people have already taken care of it for you.
 
 </br>
 </br>
@@ -50,7 +50,7 @@ pathname = '/Users/pilgrim/diveintopython3/examples/humansize.py'
 print (os.path.split(pathname) )                                       #①
 #('/Users/pilgrim/diveintopython3/examples', 'humansize.py')
 
-(dirname, filename) = os.path.split(pathname)                          #②
+```(dirname, filename) = os.path.split(pathname)```                          #②
 print (dirname )                                                       #③
 #/Users/pilgrim/diveintopython3/examples
 
