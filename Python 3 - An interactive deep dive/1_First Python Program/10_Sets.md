@@ -2,7 +2,7 @@
 
 </br>
 
-***A set is an unordered “bag” of unique values.*** A single set can contain values of any immutable datatype. Once you have two sets, you can do standard set operations like union, intersection, and set difference.
+***<mark>A set is an unordered “bag” of unique values.</mark>*** A single set can contain values of any immutable datatype. Once you have two sets, you can do standard set operations like union, intersection, and set difference.
 
 ### - Creating A Set :
 First things first. Creating a set is easy.
@@ -25,7 +25,7 @@ print (a_set)
 
 1. ② Sets are actually implemented as classes, but don’t worry about that for now.
 
-2. ③ To create a set with multiple values, separate the values with commas and wrap it all up with curly brackets.
+2. ③ To create a set with multiple values, <mark>separate the values with commas and wrap it all up with curly brackets.</mark>
 
 3. You can also create a set out of a list.
 
@@ -41,7 +41,7 @@ print (a_list )                                       #③
 
 ```
 
-1. ② As I mentioned earlier, a single set can contain values of any datatype. And, as I mentioned earlier, sets are unordered. This set does not remember the original order of the list that was used to create it. 
+1. ② As I mentioned earlier, <mark>a single set can contain values of any datatype.</mark> And, as I mentioned earlier, sets are unordered. This set does not remember the original order of the list that was used to create it. 
     - If you were to add items to this set, it would not remember the order in which you added them.
 
 2. Don’t have any values yet? Not a problem. You can create an empty set.
@@ -67,7 +67,7 @@ print (not_sure = {})    #⑤
 
 - ① To create an empty set, call set() with no arguments.
 
--   ⑤ Due to historical quirks carried over from Python 2, you can not create an empty set with two curly brackets. This actually creates an empty dictionary, not an empty set.
+-   ⑤ Due to historical quirks carried over from Python 2, <mark>you can not create an empty set with two curly brackets. This actually creates an empty dictionary, not an empty set.</mark>
 
 </br>
 </br>
@@ -94,7 +94,7 @@ print (len(a_set))    #④
 ```
 
 </br>
-- ③ Sets are bags of unique values. If you try to add a value that already exists in the set, it will do nothing. It won’t raise an error; it’s just a no-op.
+- ③ <mark>Sets are bags of unique values. If you try to add a value that already exists in the set, it will do nothing.</mark> It won’t raise an error; it’s just a no-op.
 
 </br>
 </br>
@@ -159,7 +159,7 @@ print (a_set.remove(21))                 #④
 
 - ② If you call the discard() method with a value that doesn’t exist in the set, it does nothing. No error; it’s just a no-op.
 
-- ④ Here’s the difference: if the value doesn’t exist in the set, the remove() method raises a KeyError exception.
+- ④ Here’s the difference: <mark>if the value doesn’t exist in the set, the remove() method raises a KeyError exception.</mark>
 
 - Like lists, sets have a pop() method.
 
@@ -189,7 +189,7 @@ print (a_set.pop() )                               #③
 
 ```
 </br>
-- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, ***so there is no way to control which value gets removed. It is completely arbitrary.***
+- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, ***<mark>so there is no way to control which value gets removed. It is completely arbitrary.</mark>mark>***
 </br>
 - ② The clear() method removes all values from a set, leaving you with an empty set. This is equivalent to a_set = set(), which would create a new empty set and overwrite the previous value of the a_set variable.
 
