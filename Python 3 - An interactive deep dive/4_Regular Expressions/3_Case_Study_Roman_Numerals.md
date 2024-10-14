@@ -29,11 +29,17 @@ print (re.search(pattern, ''))      #⑥
 - ① This pattern has three parts. ^ matches what follows only at the beginning of the string. You want to make sure that the M characters, if they’re there, are at the beginning of the string.
     - M? optionally matches a single M character. Since this is repeated three times, you’re matching anywhere from zero to three M characters in a row.
     - nd ＄ matches the end of the string. When combined with the ^ character at the beginning, this means that the pattern must match the entire string, with no other characters before or after the M characters.
+
+</br>
 - ② The essence of the re module is the search() function, that takes a regular expression (pattern) and a string ('M') to try to match against the regular expression. If a match is found, search() returns an object which has various methods to describe the match.
     - if no match is found, search() returns None, the Python null value.
+</br>
 - ③ 'MM’ matches because the first and second optional M characters match and the third M is ignored.
+</br>
 - ④ 'MMM' matches because all three M characters match.
+</br>
 - ⑤ 'MMMM' does not match. All three M characters match, but then the regular expression insists on the string ending (because of the ＄ character).
+</br>
 - ⑥ Interestingly, an empty string also matches this regular expression, since all the M characters are optional.
 
 </br>
@@ -67,6 +73,7 @@ print (re.search(pattern, ''))                #⑥
 ```
 </br>
 - ① In parentheses, which defines a set of three mutually exclusive patterns, separated by vertical bars: CM, CD, and D?C?C?C? (which is an optional D followed by zero to three optional C characters). The regular expression parser checks for each of these patterns in order (from left to right), takes the first one that matches, and ignores the rest.
+</br>
 - ② 'MCM' matches because the first M matches, the second and third M characters are ignored, and the CM matches (so the CD and D?C?C?C? patterns are never even considered).
 - ③ 'MD' matches because the first M matches, the second and third M characters are ignored, and the D?C?C?C? pattern matches D.
 - ④ 'MMMCCC' matches because all three M characters match, and the D?C?C?C? pattern matches CCC (the D is optional and is ignored).
