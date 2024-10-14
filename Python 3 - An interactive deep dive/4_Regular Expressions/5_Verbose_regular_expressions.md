@@ -2,8 +2,8 @@
 
 - Regular expressions are difficult to read, and even if you figure out what one does, that’s no guarantee that you’ll be able to understand it six months later. What you really need is inline documentation.
 - Python allows you to do this with something called verbose regular expressions. verbose regular expression is different from a compact regular expression in two ways:
-    - Whitespace is ignored. Spaces, tabs, and carriage returns are not matched as spaces, tabs, and carriage returns. They’re not matched at all. (If you want to match a space in a verbose regular expression, you’ll need to escape it by putting a backslash in front of it.)
-    - Comments are ignored. A comment in a verbose regular expression is just like a comment in Python code: it starts with a # character and goes until the end of the line.
+    - <mark>Whitespace is ignored. Spaces, tabs, and carriage returns are not matched as spaces, tabs, and carriage returns. They’re not matched at all.</mark> (If you want to match a space in a verbose regular expression, you’ll need to escape it by putting a backslash in front of it.)
+    - <mark>Comments are ignored.</mark> A comment in a verbose regular expression is just like a comment in Python code: it starts with a # character and goes until the end of the line.
 
 ```python
 import re
@@ -30,7 +30,9 @@ print (re.search(pattern, 'MMMDCCCLXXXVIII', re.VERBOSE))   #③
 
 print (re.search(pattern, 'M') )                            #④
 ```
+
 </br>
+
 ```console
 <_sre.SRE_Match object; span=(0, 1), match='M'>
 <_sre.SRE_Match object; span=(0, 9), match='MCMLXXXIX'>
