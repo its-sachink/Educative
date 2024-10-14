@@ -123,7 +123,7 @@ print (a_set)
 
 - ③ You can actually call the update() method with any number of arguments. When called with two sets, the update() method adds all the members of each set to the original set (dropping duplicates).
 
-- ④ The update() method can take objects of a number of different datatypes, including lists. ***<mark>When called with a list, the update() method adds all the items of the list to the original set.*** </mark>
+- ④ The update() method can take objects of a number of different datatypes, including lists. ***<mark>When called with a list, the update() method adds all the items of the list to the original set.</mark>*** 
 
 
 ### - Removing Items From A Set :
@@ -189,7 +189,7 @@ print (a_set.pop() )                               #③
 
 ```
 </br>
-- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, ***<mark>so there is no way to control which value gets removed. It is completely arbitrary.</mark>mark>***
+- ① The pop() method removes a single value from a set and returns the value. However, since sets are unordered, there is no “last” value in a set, *** <mark> so there is no way to control which value gets removed. It is completely arbitrary. </mark> ***
 </br>
 - ② The clear() method removes all values from a set, leaving you with an empty set. This is equivalent to a_set = set(), which would create a new empty set and overwrite the previous value of the a_set variable.
 
